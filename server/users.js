@@ -1,6 +1,6 @@
 Meteor.methods ({
   singupUser: function (opts) {
-    var opts = _.pick (opts, 'username, password, firstName, lastName, email');
+    opts = _.pick(opts, 'username, password, firstName, lastName, email');
     var emailRegxp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (emailRegxp.test(opts.username))
